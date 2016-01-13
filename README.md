@@ -1,4 +1,4 @@
-## nyc-subway-station-recommender
+# nyc-subway-station-recommender
 
 
 This project is an exercise in data science consulting. The basic set up is that you are given a hypothetical request from a fictitious client requesting a problem to be solved. The problem is intentionally ambiguous to simulate the need to make assumptions and exercise judgement in the approach to solving the problem. The client request is given as follows: 
@@ -14,3 +14,11 @@ Karrine and Dahlia
 WTWY International*
 
 [Link to Presentation](https://docs.google.com/presentation/d/1s5yG2yhrOhlcQS8lzU-W7oRe2lRHf-Ne8bPxPbgQrL0/edit?usp=sharing)
+
+## Assumptions
+
+## Data Resources
+
+## Model
+
+## Results
