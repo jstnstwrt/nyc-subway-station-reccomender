@@ -12,3 +12,5 @@ As we mentioned, we are interested in harnessing the power of data and analytics
 >*Best,
 Karrine and Dahlia
 WTWY International*
+
+[Link to Presentation](https://docs.google.com/presentation/d/1s5yG2yhrOhlcQS8lzU-W7oRe2lRHf-Ne8bPxPbgQrL0/edit?usp=sharing)
