@@ -36,3 +36,5 @@ merge_filled.duplicated('zip').value_counts()
 
 #Export to repo
 merge_filled.to_csv("wealth_startups_mta_entrances.csv", index = False)
+
+#test
