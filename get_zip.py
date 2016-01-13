@@ -20,5 +20,5 @@ for station in mta:
 		station = np.append(station,zipcode)
 	mta_zips = np.append(mta_zips,[station],axis = 0)
 
-
-print mta_zips
+df_zips = pd.DataFrame(mta_zips)
+df_zips.to_csv('mta_with_zips.csv')
