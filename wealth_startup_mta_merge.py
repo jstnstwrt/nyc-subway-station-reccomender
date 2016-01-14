@@ -9,7 +9,7 @@ mta_zips = pd.read_csv("mta_with_zips.csv")
 mta_zips = mta_zips[[1, 2, 3, 4, 8]]
 
 #Rename mta file columns to allow merging with mta volume data and wealth/startup file
-mta_zips.columns = ['ca', 'unit', 'station', 'line', 'zip']
+mta_zips.columns = ['unit', 'ca', 'station', 'line', 'zip']
 
 #Merge mta and startup/wealth by zip
 merge = wlth_strt.merge(mta_zips, on = 'zip')
