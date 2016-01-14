@@ -4,6 +4,7 @@ from collections import defaultdict
 import matplotlib.pyplot as plt
 import os.path
 import pandas as pd
+import seaborn as sns
 
 def read_file(filename):
     d = []
@@ -99,7 +100,24 @@ def dframes_of_weeks_and_hours(*args):
     return df_dict
 
 
-summer_data = dframes_of_weeks_and_hours('turnstile_150530.csv',  'turnstile_150606.csv', 'turnstile_150613.csv', 'turnstile_150620.csv', 'turnstile_150627.csv', 'turnstile_150704.csv', 'turnstile_150711.csv', 'turnstile_150718.csv', 'turnstile_150725.csv', 'turnstile_150801.csv', 'turnstile_150801.csv', 'turnstile_150808.csv', 'turnstile_150815.csv', 'turnstile_150822.csv', 'turnstile_150829.csv', 'turnstile_150905.csv', 'turnstile_150912.csv')
+summer_data = dframes_of_weeks_and_hours('turnstile_150530.csv',  'turnstile_150606.csv', 
+                                         'turnstile_150613.csv', 'turnstile_150620.csv', 
+                                         'turnstile_150627.csv', 'turnstile_150704.csv', 
+                                         'turnstile_150711.csv', 'turnstile_150718.csv', 
+                                         'turnstile_150725.csv', 'turnstile_150801.csv', 
+                                         'turnstile_150801.csv', 'turnstile_150808.csv', 
+                                         'turnstile_150815.csv', 'turnstile_150822.csv', 
+                                         'turnstile_150829.csv', 'turnstile_150905.csv', 
+                                         'turnstile_150912.csv')
 
 print_x_dict_kv(summer_data, 10)
+
+penn = summer_data[('N069', 'R013', '34 ST-PENN STA')]
+st_49 = summer_data[('A016', 'R081', '49 ST-7 AVE')]
+#print(penn)
+
+def get_heatmap_for_entryway(place):
+    sns.heatmap(place)
+    
+get_heatmap_for_entryway(penn)
    
