@@ -1,15 +1,18 @@
 import pandas as pd
 import numpy as np
 
-df = pd.DataFrame([[1,2],[3,4],[5,6]])
-df.columns = ['t','w']
+df = pd.DataFrame([['a',1,6],['b',3,4],['c',5,2]])
+df.columns = ['z','t','w']
+
 
 def rank_zips(alpha=1):
-	# for each zipcode
-	# compute mixture of tech and wealth
-	# ie, at + (1-a)w
-	# return ranked list of zips
-	pass
+	t = df['t']
+	w = df['w']
+	r = alpha*t + (1-alpha)*w
+	df['r'] = r
+	print df.sort(['r'])['z']
+
+rank_zips(1)
 
 def zip_to_station(zipcode):
 	# query data set for all staions in zipcode
