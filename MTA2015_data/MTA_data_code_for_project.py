@@ -110,7 +110,12 @@ summer_data = dframes_of_weeks_and_hours('turnstile_150530.csv',  'turnstile_150
                                          'turnstile_150829.csv', 'turnstile_150905.csv', 
                                          'turnstile_150912.csv')
 
-print_x_dict_kv(summer_data, 10)
+#print_x_dict_kv(summer_data, 10)
+
+
+####################################################
+###Getting Heat Plot of  entries at each entryway###
+####################################################
 
 penn = summer_data[('N069', 'R013', '34 ST-PENN STA')]
 st_49 = summer_data[('A016', 'R081', '49 ST-7 AVE')]
@@ -120,4 +125,79 @@ def get_heatmap_for_entryway(place):
     sns.heatmap(place)
     
 get_heatmap_for_entryway(penn)
+
+
+########################################################
+###Getting Bar Plot of total entries at each entryway###
+########################################################
+
+def plot_total_riders_by_entryway(data):
+    
+    num_entryways = len(data)
+    x = range(1,num_entryways+1)
+    entryway_names = []
+    num_entries = []
+    cols = ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"]
+    
+    for k,df in data.items():
+        entryway_total_entries = 0
+        entryway_names.append(k)
+        for day in cols:  
+            entryway_total_entries += df[day].sum()
+        num_entries.append(int(entryway_total_entries))
+        
+    entryway_names, num_entries = (list(t) for t in 
+                                   zip(*sorted(zip(entryway_names, num_entries), 
+                                    key = lambda x: x[1]))) #sort both concurrently
+    
+    #print(entryway_names[-20:], num_entries[-20:])
+    
+    title_name = "Top 20 Subway Entryways for Summer 2015"    
+        
+    plt.figure(figsize=(10,5))
+    plt.title(title_name)
+    plt.xticks(x, entryway_names, rotation='vertical')
+    plt.xlabel('Entryways')
+    plt.ylabel('Number of Entries')
+    plt.bar(x[-20:], num_entries[-20:])
+    
+    return entryway_names, num_entries
+
+ewn1, ne1 = plot_total_riders_by_entryway(summer_data)
+
+
+###########################################
+###Combining previous data for final CSV###
+###########################################
+
+ca = [entryway[0].strip() for entryway in ewn1]
+unit = [entryway[1].strip() for entryway in ewn1]
+station = [entryway[2].strip() for entryway in ewn1]
+
+new_dict = {"ca": ca,
+                "unit": unit,
+                "station": station,
+                "total entries": ne1}
+
+new_df = pd.DataFrame(needed_dict, columns=['ca', 'unit', 'station', 'total entries'])
+
+def read_old_data_file(path):
+    with open(path) as file:
+        old_data = pd.read_csv(file)
+        
+    return old_data
+
+def merge_data(old_path, new_data):
+    old_data = read_old_data_file(old_path)
+    merge = pd.DataFrame.merge(old_data, new_data, on = ['unit', 'ca', 'station'])
+    
+    #print(old_data, new_data)
+    #print(merge)
+    
+    #export to csv
+    merge.to_csv("../everything_for_mta_entrances.csv", index = False)
+    
+    
+    
+merge_data('../wealth_startups_mta_entrances.csv', new_df)
    
