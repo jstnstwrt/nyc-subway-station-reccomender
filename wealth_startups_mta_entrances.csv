@@ -1,4 +1,4 @@
-rank,zip,population,income,startups,national_rank,ca,unit,station,line,income_index,startups_index,income_prop,startups_prop
+rank,zip,population,income,startups,national_rank,unit,ca,station,line,income_index,startups_index,income_prop,startups_prop
 1,10007,3522,112947,4,132,R044,R210,BROOKLYN BRIDGE,456JZ,2.25,0.36,0.06,0.01
 1,10007,3522,112947,4,132,R044,R210A,BROOKLYN BRIDGE,JZ456,2.25,0.36,0.06,0.01
 1,10007,3522,112947,4,132,R029,N091,CHAMBERS ST,ACE23,2.25,0.36,0.06,0.01
