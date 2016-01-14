@@ -29,9 +29,9 @@ len(merge[(merge['income'] > 0) | (merge['startups'] > 0)])
 #Create subset of data that has either income or startups populated
 merge_filled = merge[(merge['income'] > 0) | (merge['startups'] > 0)]
 
-#99 unique entrances
+#99 unique stations
 merge_filled.duplicated('STATION').value_counts()
-#38 unique stations
+#38 unique zips
 merge_filled.duplicated('zip').value_counts()
 
 #Export to repo
