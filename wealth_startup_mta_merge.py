@@ -37,6 +37,8 @@ score_final = merge_filled.merge(score_dedup, on = 'zip')
 #Export file
 score_final.to_csv("wealth_startups_mta_entrances.csv", index = False)
 
+#test
+
 ######################
 #QA CHECKS
 ######################
