@@ -21,6 +21,7 @@ WTWY International*
 
 ## Model
 [top 10 wealthiest zips map](https://www.google.com/fusiontables/embedviz?q=select+col10+from+1MtC0oa6oq1WPuT9AydZK6IFdLketH8pwf8Zppg+where+col1+in+('10007'%2C+'10280'%2C+'10162'%2C+'10004'%2C+'10069'%2C+'10282'%2C+'10006'%2C+'10022'%2C+'10005'%2C+'10024')&viz=MAP&h=false&lat=40.74003468610098&lng=-73.90854823437503&t=1&z=12&l=col10&y=11&tmplt=2&hml=KML)<br>
-[top 10 startups zips map](https://www.google.com/fusiontables/embedviz?q=select+col10+from+1MtC0oa6oq1WPuT9AydZK6IFdLketH8pwf8Zppg+where+col1+in+('10010'%2C+'10003'%2C+'10013'%2C+'10001'%2C+'10011'%2C+'10012'%2C+'10016'%2C+'10018'%2C+'10014')&viz=MAP&h=false&lat=40.74003468610098&lng=-73.90854823437502&t=1&z=12&l=col10&y=11&tmplt=2&hml=KML)
+[top 10 startups zips map](https://www.google.com/fusiontables/embedviz?q=select+col10+from+1MtC0oa6oq1WPuT9AydZK6IFdLketH8pwf8Zppg+where+col1+in+('10010'%2C+'10003'%2C+'10013'%2C+'10001'%2C+'10011'%2C+'10012'%2C+'10016'%2C+'10018'%2C+'10014')&viz=MAP&h=false&lat=40.74003468610098&lng=-73.90854823437502&t=1&z=12&l=col10&y=11&tmplt=2&hml=KML)<br>
+[top 10 zips by entries volume](https://www.google.com/fusiontables/embedviz?q=select+col10+from+1MtC0oa6oq1WPuT9AydZK6IFdLketH8pwf8Zppg+where+col1+in+('10001'%2C+'10019'%2C+'10003'%2C+'10011'%2C+'10036'%2C+'10017'%2C+'10023'%2C+'10022'%2C+'10007'%2C+'10002')&viz=MAP&h=false&lat=40.75798111514317&lng=-73.91163813916019&t=1&z=12&l=col10&y=11&tmplt=2&hml=KML)
 
 ## Results
